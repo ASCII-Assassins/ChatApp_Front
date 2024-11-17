@@ -1,4 +1,4 @@
-import GroupImg from "../../assets/img/groups/group-01.jpg"
+import GroupImg from "../../../public/assets/img/groups/group-01.jpg"
 
 export default function RecievingMessage() {
     return (
