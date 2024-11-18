@@ -48,7 +48,7 @@ function Home() {
     <div className="content main_content">
       <SideBar tabs={TABS} setActiveTab={setActiveTab} activeTab={activeTab} />
       <Aside activeTab={activeTab}/>
-      <Main />
+      <Main activeTab={activeTab}/>
     </div>
   );
 }

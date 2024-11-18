@@ -12,7 +12,6 @@ function Aside({activeTab} : { activeTab: string }) {
                         <SearchBar/>
                         <RecievingMessage/> 
           </>
-
           }
 
         </div>
