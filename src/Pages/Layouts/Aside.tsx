@@ -1,5 +1,4 @@
 import Group from "../../Components/Group/Group";
-import ListGroups from "../../Components/Group/ListGroups";
 
 function Aside({activeTab} : { activeTab: string }) {
   return (
