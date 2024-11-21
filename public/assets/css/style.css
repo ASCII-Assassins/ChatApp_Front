@@ -22,6 +22,8 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   transition: background-color 0.3s, color 0.3s;
+  text-decoration: none !important;
+
 }
 
 ::selection {
@@ -61,11 +63,12 @@ strong {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  color: #141B27;
+  color: #000000 !important;
   font-family: "Archivo", sans-serif;
   font-weight: 700;
   margin-bottom: 0;
 }
+
 
 ol, ul {
   list-style: none;
@@ -7142,7 +7145,7 @@ h6,
 a {
   color: #141B27;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none !important;
   -webkit-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -8877,7 +8880,7 @@ Form help
   font-size: 0.75rem;
   color: #FFF;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none !important;
   cursor: pointer;
   user-select: none;
   background: #60CBFF;

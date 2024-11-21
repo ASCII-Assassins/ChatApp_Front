@@ -1,5 +1,5 @@
-import SearchBar from "../../Components/Channel/Searchbar";
-import RecievingMessage from "../../Components/Channel/RecievingMessage";
+import Group from "../../Components/Group/Group";
+import ListGroups from "../../Components/Group/ListGroups";
 
 function Aside({activeTab} : { activeTab: string }) {
   return (
@@ -9,8 +9,7 @@ function Aside({activeTab} : { activeTab: string }) {
           {/* Put your content here */}
           {activeTab === "group-menu" && 
           <>
-                        <SearchBar/>
-                        <RecievingMessage/> 
+                  <Group/>      
           </>
           }
 
