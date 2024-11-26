@@ -1,4 +1,5 @@
-function SideBar({ tabs, activeTab, setActiveTab }) {
+function SideBar({ tabs, activeTab, setActiveTab } : {tabs:string,activeTab:string, setActiveTab:(tabId: string)=>void}) {
+  
   const handleTabClick = (tabId: string) => (e: React.MouseEvent) => {
     e.preventDefault();
     setActiveTab(tabId);
@@ -14,7 +15,7 @@ function SideBar({ tabs, activeTab, setActiveTab }) {
       <div className="menu-wrap">
         <div className="main-menu">
           <ul className="nav">
-            {tabs.map((tab, indx) => (
+            {tabs?.map((tab, indx) => (
               <li
                 key={indx}
                 data-bs-toggle="tooltip"

@@ -47,8 +47,8 @@ function Home() {
   return (
     <div className="content main_content">
       <SideBar tabs={TABS} setActiveTab={setActiveTab} activeTab={activeTab} />
-      <Aside />
-      <Main />
+      <Aside activeTab={activeTab}/>
+      <Main activeTab={activeTab}/>
     </div>
   );
 }
