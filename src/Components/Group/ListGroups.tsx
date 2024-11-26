@@ -31,10 +31,10 @@ export default function ListGroups({ groups, myGroups }: ListGroupsProps) {
 
                 <div className="overflow-auto mb-5" style={{ maxHeight: '400px' }}>
                     { }
-                    {groupsToDisplay.length >0 ? groupsToDisplay?.map((group) => (
-                        <div className="chat-users-wrap">
+                    {groupsToDisplay.length >0 ? groupsToDisplay?.map((group, index) => (
+                        <div className="chat-users-wrap" key={index}>
                             <div className="chat-list">
-                                <a href="group-chat.html" className="chat-user-list">
+                                <div className="chat-user-list">
                                     <div className="avatar avatar-lg online me-2">
                                         <img src={GroupImg} className="rounded-circle" alt="image" />
                                     </div>
@@ -53,7 +53,7 @@ export default function ListGroups({ groups, myGroups }: ListGroupsProps) {
                                             </div>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                                 <div className="chat-dropdown">
                                     <a className="#" href="#" data-bs-toggle="dropdown">
                                         <i className="ti ti-dots-vertical"></i>

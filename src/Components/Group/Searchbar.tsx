@@ -1,18 +1,26 @@
 import CreateGroup from "./createGroup"
 import { useState } from "react";
+
+interface Group{
+    name: String,
+    description: string,
+    owner: string,
+    members: [],
+    isPrivate: boolean
+}
 export default function SearchBar({ setGroups, groups }) {
     const [searchKey, setSearchKey] = useState('');
-    // const [filterGroup, setFilterGroup] = useState(groups);
-
-    function handleSearchChange(e) {
+    function handleSearchChange(e :any) {
         const searchKey = e.target.value
         setSearchKey(searchKey);
     }
-    console.log(searchKey);
-
-    const filtredGroups = groups.filter((group) => group.name.toLowerCase().includes(searchKey.toLocaleLowerCase()));
-    if(!filtredGroups){
-        console.log('not found')
+    if(searchKey !== ''){
+        const filtredGroups = groups.filter((group: Group) => group.name.toLowerCase().includes(searchKey.toLowerCase()));
+        if(!filtredGroups){
+            console.log('not found')
+        }else{
+            console.log('°°°°°°°°°°°°°',filtredGroups);
+        }
     }
 
     return (
@@ -23,11 +31,11 @@ export default function SearchBar({ setGroups, groups }) {
                     <div className="d-flex align-items-center mb-3">
                         <CreateGroup setGroups={setGroups} />
                         <div className="dropdown">
-                            <a href="javascript:void(0);" data-bs-toggle="dropdown" className="fs-16 text-default">
+                            <div  data-bs-toggle="dropdown" className="fs-16 text-default">
                                 <i className="ti ti-dots-vertical"></i>
-                            </a>
+                            </div>
                             <ul className="dropdown-menu p-3">
-                                <li><a className="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#invite"><i className="ti ti-send me-2"></i>Invite Others</a></li>
+                                <li><div className="dropdown-item" data-bs-toggle="modal" data-bs-target="#invite"><i className="ti ti-send me-2"></i>Invite Others</div></li>
                             </ul>
                         </div>
                     </div>

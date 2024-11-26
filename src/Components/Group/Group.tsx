@@ -11,15 +11,15 @@ export default function Group() {
             const AvailableGroups = await axios.get("http://localhost:3000/group/all");
             setGroups(AvailableGroups.data.groups)
             // console.log('+++++++++',AvailableGroups.data.groups);
-            try {
-                const userGroups = await axios.get("http://localhost:3000/group/mygroups");
-                console.log('++++++++++++++++++', userGroups);
-                if (userGroups) {
-                    setMyGroups(userGroups.data.groups);
-                }
-            } catch (e) {
-                console.log(e.response.data)
-            }
+            // try {
+            //     const userGroups = await axios.get("http://localhost:3000/group/mygroups");
+            //     console.log('++++++++++++++++++', userGroups);
+            //     if (userGroups) {
+            //         setMyGroups(userGroups.data.groups);
+            //     }
+            // } catch (e) {
+            //     console.log('the error is ', e)
+            // }
 
         }
         GetGroups();

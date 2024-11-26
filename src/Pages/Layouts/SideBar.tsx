@@ -15,7 +15,7 @@ function SideBar({ tabs, activeTab, setActiveTab } : {tabs:string,activeTab:stri
       <div className="menu-wrap">
         <div className="main-menu">
           <ul className="nav">
-            {tabs.map((tab, indx) => (
+            {tabs?.map((tab, indx) => (
               <li
                 key={indx}
                 data-bs-toggle="tooltip"
